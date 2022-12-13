@@ -1,8 +1,11 @@
 const express = require('express')
-const fs = required('fs')
+const fs = require('fs')
 const app = express()
 const port = 3000
 const pokemon = require('./models/pokemon.js')
+
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine()) 
 
 app.listen(port, function () {
     console.log("listening")
@@ -13,7 +16,6 @@ app.get("/", (req, res) => {
 })
 
 app.get("/pokemon/", (req, res) => {
-    res.render("Index.jsx", {
-        pokemon: pokemon
+    res.render("Index", {
     })
 })

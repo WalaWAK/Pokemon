@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+const React = require('react')
+
+const myStyle = {
+    color: '#ffffff',
+    backgroundColor: '#000000',
+  };
+
+  class MyFirstComponent extends React.Component {
+    render() {
+        return (<h1 style={myStyle}>See All The Pokemon!</h1>)
+    }
+}
+
+module.exports = MyFirstComponent
